@@ -49,9 +49,9 @@ export default function RootLayout({
               <div>
                 <h3 className="text-lg font-semibold mb-4">关注我们</h3>
                 <div className="flex space-x-4">
-                  <a href="#" className="text-gray-600 hover:text-gray-900">微信</a>
-                  <a href="#" className="text-gray-600 hover:text-gray-900">微博</a>
-                  <a href="#" className="text-gray-600 hover:text-gray-900">抖音</a>
+                  <Link href="#" className="text-gray-600 hover:text-gray-900">微信</Link>
+                  <Link href="#" className="text-gray-600 hover:text-gray-900">微博</Link>
+                  <Link href="#" className="text-gray-600 hover:text-gray-900">抖音</Link>
                 </div>
               </div>
             </div>
