@@ -6,8 +6,8 @@ import Link from 'next/link';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "北京徒步活动",
-  description: "探索北京最美的徒步路线，体验专业的徒步活动",
+  title: "徒步北京 - 探索北京最美的徒步路线",
+  description: "发现北京周边最受欢迎的徒步路线，包括香山、慕田峪长城、灵山等经典路线。提供详细的路线指南、难度评级和实用建议。",
 };
 
 export default function RootLayout({
@@ -19,24 +19,44 @@ export default function RootLayout({
     <html lang="zh">
       <body className={inter.className}>
         <header className="bg-white shadow-sm">
-          <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <div className="text-2xl font-bold text-gray-900">
-              <Link href="/" className="text-xl font-bold">
+          <nav className="container mx-auto px-4 py-4">
+            <div className="flex justify-between items-center">
+              <Link href="/" className="text-2xl font-bold text-gray-800">
                 徒步北京
               </Link>
-            </div>
-            <div className="space-x-4">
-              <a href="/" className="text-gray-600 hover:text-gray-900">首页</a>
-              <a href="#" className="text-gray-600 hover:text-gray-900">活动</a>
-              <a href="#" className="text-gray-600 hover:text-gray-900">关于我们</a>
+              <div className="space-x-6">
+                <Link href="/" className="text-gray-600 hover:text-gray-900">首页</Link>
+                <Link href="/articles" className="text-gray-600 hover:text-gray-900">徒步攻略</Link>
+                <Link href="/activities" className="text-gray-600 hover:text-gray-900">活动日历</Link>
+                <Link href="/about" className="text-gray-600 hover:text-gray-900">关于我们</Link>
+              </div>
             </div>
           </nav>
         </header>
         {children}
-        <footer className="bg-gray-50 mt-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div className="text-center text-gray-500">
-              <p>© 2024 北京徒步活动. All rights reserved.</p>
+        <footer className="bg-gray-50 border-t">
+          <div className="container mx-auto px-4 py-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div>
+                <h3 className="text-lg font-semibold mb-4">关于我们</h3>
+                <p className="text-gray-600">徒步北京致力于为徒步爱好者提供最优质的徒步路线信息和活动组织服务。</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold mb-4">联系方式</h3>
+                <p className="text-gray-600">邮箱：contact@hiking-beijing.com</p>
+                <p className="text-gray-600">电话：010-12345678</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold mb-4">关注我们</h3>
+                <div className="flex space-x-4">
+                  <a href="#" className="text-gray-600 hover:text-gray-900">微信</a>
+                  <a href="#" className="text-gray-600 hover:text-gray-900">微博</a>
+                  <a href="#" className="text-gray-600 hover:text-gray-900">抖音</a>
+                </div>
+              </div>
+            </div>
+            <div className="mt-8 pt-8 border-t text-center text-gray-600">
+              <p>&copy; 2024 徒步北京. All rights reserved.</p>
             </div>
           </div>
         </footer>

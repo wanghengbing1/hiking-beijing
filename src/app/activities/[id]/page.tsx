@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { useParams } from 'next/navigation';
-import { MapPinIcon, CalendarIcon, ClockIcon, ArrowTrendingUpIcon, ScaleIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { HikingActivity } from '../../../types/hiking';
 import Image from 'next/image';

@@ -84,11 +84,4 @@ export async function getWechatArticles(offset: number = 0, count: number = 10):
 export async function getWechatArticleDetail(id: string): Promise<Article | null> {
   console.log('Using mock article detail');
   return MOCK_ARTICLES.find(article => article.id === id) || null;
-}
-
-// 从 HTML 内容中提取第一张图片
-function extractImageFromContent(content: string | undefined): string | null {
-  if (!content) return null;
-  const match = content.match(/<img[^>]+src="([^">]+)"/);
-  return match ? match[1] : null;
 } 
