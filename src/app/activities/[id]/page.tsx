@@ -24,7 +24,18 @@ const mockActivities: HikingActivity[] = [
     elevationGain: 300,
     totalDistance: 5,
     imageUrl: '/images/xiangshan.jpg',
-    description: '欣赏香山红叶，体验北京最美的秋季徒步路线'
+    description: '欣赏香山红叶，体验北京最美的秋季徒步路线',
+    articleUrl: '/articles/1',
+    organizer: {
+      name: '北京户外俱乐部',
+      phone: '13800138000',
+      email: 'contact@bjoutdoor.com'
+    },
+    leader: {
+      name: '张教练',
+      experience: '5年徒步领队经验',
+      phone: '13900139000'
+    }
   },
   {
     id: '2',
@@ -36,7 +47,18 @@ const mockActivities: HikingActivity[] = [
     elevationGain: 800,
     totalDistance: 8,
     imageUrl: '/images/mutianyu.jpg',
-    description: '探索慕田峪长城，感受历史文化的魅力'
+    description: '探索慕田峪长城，感受历史文化的魅力',
+    articleUrl: '/articles/2',
+    organizer: {
+      name: '长城徒步协会',
+      phone: '13800138001',
+      email: 'contact@greatwall.com'
+    },
+    leader: {
+      name: '李教练',
+      experience: '8年徒步领队经验',
+      phone: '13900139001'
+    }
   },
   {
     id: '3',
@@ -48,7 +70,18 @@ const mockActivities: HikingActivity[] = [
     elevationGain: 1500,
     totalDistance: 12,
     imageUrl: '/images/lingshan.jpg',
-    description: '挑战北京最高峰，体验极限徒步的乐趣'
+    description: '挑战北京最高峰，体验极限徒步的乐趣',
+    articleUrl: '/articles/3',
+    organizer: {
+      name: '北京登山协会',
+      phone: '13800138002',
+      email: 'contact@bjmountaineering.com'
+    },
+    leader: {
+      name: '王教练',
+      experience: '10年登山领队经验',
+      phone: '13900139002'
+    }
   },
   {
     id: '4',
@@ -60,7 +93,18 @@ const mockActivities: HikingActivity[] = [
     elevationGain: 600,
     totalDistance: 7,
     imageUrl: '/images/badaling.jpg',
-    description: '探索八达岭长城，感受历史文化的魅力'
+    description: '探索八达岭长城，感受历史文化的魅力',
+    articleUrl: '/articles/4',
+    organizer: {
+      name: '长城徒步协会',
+      phone: '13800138003',
+      email: 'contact@greatwall.com'
+    },
+    leader: {
+      name: '赵教练',
+      experience: '6年徒步领队经验',
+      phone: '13900139003'
+    }
   },
   {
     id: '5',
@@ -72,7 +116,18 @@ const mockActivities: HikingActivity[] = [
     elevationGain: 200,
     totalDistance: 4,
     imageUrl: '/images/sanling.jpg',
-    description: '探索明十三陵，感受历史文化'
+    description: '探索明十三陵，感受历史文化',
+    articleUrl: '/articles/5',
+    organizer: {
+      name: '北京户外俱乐部',
+      phone: '13800138004',
+      email: 'contact@bjoutdoor.com'
+    },
+    leader: {
+      name: '刘教练',
+      experience: '7年徒步领队经验',
+      phone: '13900139004'
+    }
   },
   {
     id: '6',
@@ -84,7 +139,18 @@ const mockActivities: HikingActivity[] = [
     elevationGain: 1200,
     totalDistance: 10,
     imageUrl: '/images/baihuashan.jpg',
-    description: '探索百花山，欣赏自然风光'
+    description: '探索百花山，欣赏自然风光',
+    articleUrl: '/articles/6',
+    organizer: {
+      name: '北京登山协会',
+      phone: '13800138005',
+      email: 'contact@bjmountaineering.com'
+    },
+    leader: {
+      name: '孙教练',
+      experience: '9年徒步领队经验',
+      phone: '13900139005'
+    }
   },
   {
     id: '7',
@@ -96,13 +162,24 @@ const mockActivities: HikingActivity[] = [
     elevationGain: 700,
     totalDistance: 6,
     imageUrl: '/images/miaofengshan.jpg',
-    description: '探索妙峰山，感受自然之美'
+    description: '探索妙峰山，感受自然之美',
+    articleUrl: '/articles/7',
+    organizer: {
+      name: '北京户外俱乐部',
+      phone: '13800138006',
+      email: 'contact@bjoutdoor.com'
+    },
+    leader: {
+      name: '周教练',
+      experience: '8年徒步领队经验',
+      phone: '13900139006'
+    }
   }
 ];
 
 export default function ActivityDetail() {
   const params = useParams();
-  const activity = mockActivities.find(a => a.id === params.id);
+  const activity = mockActivities.find(a => a.id === params?.id);
 
   if (!activity) {
     return (
