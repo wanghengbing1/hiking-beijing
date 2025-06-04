@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Link from 'next/link';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +20,11 @@ export default function RootLayout({
       <body className={inter.className}>
         <header className="bg-white shadow-sm">
           <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <div className="text-2xl font-bold text-gray-900">北京徒步</div>
+            <div className="text-2xl font-bold text-gray-900">
+              <Link href="/" className="text-xl font-bold">
+                徒步北京
+              </Link>
+            </div>
             <div className="space-x-4">
               <a href="/" className="text-gray-600 hover:text-gray-900">首页</a>
               <a href="#" className="text-gray-600 hover:text-gray-900">活动</a>

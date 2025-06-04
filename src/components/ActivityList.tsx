@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
-import { HikingActivity } from '../types/hiking';
+import { HikingActivity } from '@/types/hiking';
 import { MapPinIcon, CalendarIcon, ClockIcon, ArrowTrendingUpIcon, ScaleIcon, UserIcon, PhoneIcon, EnvelopeIcon, StarIcon, FunnelIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import Image from 'next/image';

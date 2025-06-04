@@ -1,4 +1,4 @@
-import { Article, ArticleListResponse } from '@/types/article';
+import { Article } from '@/types/article';
 import { getWechatArticles, getWechatArticleDetail } from './wechatService';
 
 // 微信公众号文章列表

@@ -5,6 +5,7 @@ import { useParams } from 'next/navigation';
 import { MapPinIcon, CalendarIcon, ClockIcon, ArrowTrendingUpIcon, ScaleIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { HikingActivity } from '../../../types/hiking';
+import Image from 'next/image';
 
 const difficultyColors = {
   '初级': 'bg-green-100 text-green-800',
@@ -125,10 +126,12 @@ export default function ActivityDetail() {
       
       <div className="bg-white rounded-lg shadow-lg overflow-hidden">
         <div className="relative h-64">
-          <img
+          <Image
             src={activity.imageUrl}
             alt={activity.name}
-            className="w-full h-full object-cover"
+            width={800}
+            height={400}
+            className="w-full h-64 object-cover rounded-lg"
           />
           <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
             <h1 className="text-4xl font-bold text-white">{activity.name}</h1>
