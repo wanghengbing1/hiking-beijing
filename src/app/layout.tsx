@@ -25,7 +25,9 @@ export default function RootLayout({
                 徒步北京
               </Link>
               <div className="space-x-6">
-                <Link href="/" className="text-gray-600 hover:text-gray-900">首页</Link>
+                <Link href="/" className="text-blue-600 hover:text-blue-800">
+                  返回首页
+                </Link>
                 <Link href="/articles" className="text-gray-600 hover:text-gray-900">徒步攻略</Link>
                 <Link href="/activities" className="text-gray-600 hover:text-gray-900">活动日历</Link>
                 <Link href="/about" className="text-gray-600 hover:text-gray-900">关于我们</Link>
